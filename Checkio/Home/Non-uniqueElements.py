@@ -4,7 +4,7 @@ from collections import Counter
 
 
 def checkio(data: list) -> list:
-    #Your code here
+    # Your code here
     #It's main function. Don't remove this function
     #It's used for auto-testing and must return a result for check.
 
