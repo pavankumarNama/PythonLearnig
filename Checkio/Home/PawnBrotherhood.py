@@ -1,5 +1,20 @@
 def safe_pawns(pawns: set) -> int:
-    return 0
+    pawan_indexs = set()
+
+    for pawn in pawns:
+        row = int(pawn[1]) - 1
+        col = ord(pawn[0]) - 97
+        pawan_indexs.add((row, col))
+
+    count = 0
+
+    for row, col in pawan_indexs:
+        is_safe = ((row - 1, col - 1) in pawan_indexs) or ((row - 1, col + 1) in pawan_indexs)
+        if is_safe:
+            count += 1
+
+    return count
+
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
